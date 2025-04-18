@@ -1,0 +1,20 @@
+<%- include('partials/userheader') %>
+<body>
+    <link rel="stylesheet" href="css/carpenter.css">
+    <div class="grid">
+        <% keeper.forEach(function(kpr){ %>
+            <div class="card">
+                <div class="intial"> <%= kpr.name.charAt(0).toUpperCase() %> </div>
+                <div class="content">
+                    <p>Company name: Quickfix keeper</p>
+                    <p>Person name: <%= kpr.name %></p>
+                    <p>Place : <%= kpr.place %></p>
+                    <p>Experience :<%= kpr.experience %></p>
+                    <p>Phone No: <%= kpr.phoneno %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

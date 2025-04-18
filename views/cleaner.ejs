@@ -1,0 +1,20 @@
+<%- include('partials/userheader') %>
+<body>
+    <link rel="stylesheet" href="css/carpenter.css">
+    <div class="grid">
+        <% cleaner.forEach(function(cnr){ %>
+            <div class="card">
+                <div class="intial"> <%= cnr.name.charAt(0).toUpperCase() %> </div>
+                <div class="content">
+                    <p>Company name: Quickfix cleaner</p>
+                    <p>Person name: <%= cnr.name %></p>
+                    <p>Place : <%= cnr.place %></p>
+                    <p>Experience :<%= cnr.experience %></p>
+                    <p>Phone No: <%= cnr.phoneno %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

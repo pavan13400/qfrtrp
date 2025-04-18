@@ -1,0 +1,40 @@
+footer{
+    height: 30px;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+    width: 100%;
+    margin:0px;
+    padding: 0px;
+}
+.social-icons {
+    margin: 0px;
+    width: 100%;
+    background-color: rgb(231, 237, 40);
+    color: rgb(27, 25, 25);
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+}
+.social-icons a {
+    color: rgb(38, 36, 36);
+    text-decoration: none;
+}
+.contact-info {
+    display: inline;
+    margin-left:10px;
+    margin-right: 10px;
+    width: 100%;
+    margin-top: 16px;
+}
+.contact-info p {
+    margin: 8px 0;
+}
+.contact-info a {
+    color: #121215ee;
+    text-decoration: none;
+}
+.contact-info a:hover {
+    color: blue;
+    text-decoration: underline;
+}       

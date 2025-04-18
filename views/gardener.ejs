@@ -1,0 +1,20 @@
+<%- include('partials/userheader') %>
+<body>
+    <link rel="stylesheet" href="css/carpenter.css">
+    <div class="grid">
+        <% gardener.forEach(function(grdnr){ %>
+            <div class="card">
+                <div class="intial"> <%= grdnr.name.charAt(0).toUpperCase() %> </div>
+                <div class="content">
+                    <p>Company name: Quickfix gardener</p>
+                    <p>Person name: <%= grdnr.name %></p>
+                    <p>Place : <%= grdnr.place %></p>
+                    <p>Experience :<%= grdnr.experience %></p>
+                    <p>Phone No: <%= grdnr.phoneno %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+
+<%- include('partials/footer') %>

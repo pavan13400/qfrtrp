@@ -1,0 +1,22 @@
+<%- include('partials/userheader') %>
+<body>
+    <link rel="stylesheet" href="css/carpenter.css">
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace">Company name: Quickfix carpenter</h1>
+    <div class="grid">
+        <% carpenter.forEach(function(carp){ %>
+            <div class="card">
+                <div class="card-image">
+                <img src="/images/carpenters/<%= carp.image %>.jpeg" alt="<%= carp.name %>" class="carpenter-image">
+                </div>
+                <div class="card-content">
+                    <p>Person name: <%= carp.name %></p>
+                    <p>Place : <%=carp.place %></p>
+                    <p>Experience :<%= carp.experience %></p>
+                    <p>Phone No: <%= carp.phoneno %></p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+
+<%- include('partials/footer') %>
