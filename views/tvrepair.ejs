@@ -1,17 +1,22 @@
 <%- include('partials/userheader') %>
 <body>
     <link rel="stylesheet" href="css/carpenter.css">
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Company name: Quickfix </h1>
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Worker:  Tv Repair</h1>
     <div class="grid">
         <% tvrepair.forEach(function(trpr){ %>
             <div class="card">
-                <div class="intial"> <%= trpr.name.charAt(0).toUpperCase() %> </div>
-                <div class="content">
-                    <p>Company name: Quickfix tvrepair</p>
-                    <p>Person name: <%= trpr.name %></p>
-                    <p>Place : <%= trpr.place %></p>
-                    <p>Experience :<%= trpr.experience %></p>
-                    <p>Phone No: <%= trpr.phoneno %></p>
-                </div>
+                <div class="card-image">
+                    <img src="/images/tvrepair/<%= trpr.image %>.jpeg" alt="<%= trpr.name %>" class="carpenter-image">
+                    </div>
+                    <div class="card-content">
+                        <p>Person name: <%= trpr.name %></p>
+                        <p>Place : <%=trpr.place %></p>
+                        <p>Experience :<%= trpr.experience %></p>
+                        <p>Phone No: <%= trpr.phoneno %></p>
+                        <p>Ratings : <%= trpr.ratings %></p>
+                        <p>Review : <%= trpr.reviews %></p>
+                    </div>
             </div>
         <% }) %>
     </div>

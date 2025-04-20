@@ -1,17 +1,22 @@
 <%- include('partials/userheader') %>
 <body>
     <link rel="stylesheet" href="css/carpenter.css">
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Company name: Quickfix </h1>
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Worker:  Electricain</h1>
     <div class="grid">
         <% electricain.forEach(function(elctcns){ %>
             <div class="card">
-                <div class="intial"> <%= elctcns.name.charAt(0).toUpperCase() %> </div>
-                <div class="content">
-                    <p>Company name: Quickfix electricain</p>
-                    <p>Person name: <%= elctcns.name %></p>
-                    <p>Place : <%= elctcns.place %></p>
-                    <p>Experience :<%= elctcns.experience %></p>
-                    <p>Phone No: <%= elctcns.phoneno %></p>
-                </div>
+                <div class="card-image">
+                    <img src="/images/electricain/<%= elctcns.image %>.jpeg" alt="<%= elctcns.name %>" class="elctcnsenter-image">
+                    </div>
+                    <div class="card-content">
+                        <p>Person name: <%= elctcns.name %></p>
+                        <p>Place : <%=elctcns.place %></p>
+                        <p>Experience :<%= elctcns.experience %></p>
+                        <p>Phone No: <%= elctcns.phoneno %></p>
+                        <p>Ratings : <%= elctcns.ratings %></p>
+                        <p>Review : <%= elctcns.reviews %></p>\
+                    </div>
             </div>
         <% }) %>
     </div>

@@ -10,8 +10,11 @@
         </div>
     </section>
     <div class="carousel">
+        <input type="radio" name="radio-btn" id="radio1" checked>
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
         <div class="slides">
-            <div class="slide">
+            <div class="slide first">
             <img src="/images/carpenter.jpg" alt="Slide 1">
             </div>
             <div class="slide">
@@ -21,14 +24,24 @@
             <img src="/images/electrician.jpg" alt="Slide 3">
             </div>
         </div>
-        <!-- <div class="navigation-manual">
+        <div class="navigation-manual">
             <label for="radio1" class="manual-btn"></label>
             <label for="radio2" class="manual-btn"></label>
             <label for="radio3" class="manual-btn"></label>
-        </div> -->
+        </div>
     </div>
-    <!-- <div class="blank">
+    <div class="blank">
         
-    </div> -->
+    </div>
 </body>
+<script>
+    let counter = 1;
+    setInterval(() => {
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if (counter > 3) {
+        counter = 1;
+      }
+    }, 2000);
+</script>
 <%- include('partials/footer') %>

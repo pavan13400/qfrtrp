@@ -1,16 +1,21 @@
 <%- include('partials/userheader') %>
 <body>
     <link rel="stylesheet" href="css/carpenter.css">
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Company name: Quickfix </h1>
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Worker:  Cleaner</h1>
     <div class="grid">
         <% cleaner.forEach(function(cnr){ %>
             <div class="card">
-                <div class="intial"> <%= cnr.name.charAt(0).toUpperCase() %> </div>
-                <div class="content">
-                    <p>Company name: Quickfix cleaner</p>
-                    <p>Person name: <%= cnr.name %></p>
-                    <p>Place : <%= cnr.place %></p>
-                    <p>Experience :<%= cnr.experience %></p>
-                    <p>Phone No: <%= cnr.phoneno %></p>
+                <div class="card-image">
+                    <img src="/images/cleaner/<%= cnr.image %>.jpeg" alt="<%= cnr.name %>" class="carpenter-image">
+                    </div>
+                    <div class="card-content">
+                        <p>Person name: <%= cnr.name %></p>
+                        <p>Place : <%=cnr.place %></p>
+                        <p>Experience :<%= cnr.experience %></p>
+                        <p>Phone No: <%= cnr.phoneno %></p>
+                        <p>Ratings : <%= cnr.ratings %></p>
+                        <p>Review : <%= cnr.reviews %></p>
                 </div>
             </div>
         <% }) %>

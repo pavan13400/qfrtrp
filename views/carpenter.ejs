@@ -1,7 +1,8 @@
 <%- include('partials/userheader') %>
 <body>
     <link rel="stylesheet" href="css/carpenter.css">
-    <h1 style="color:black;font-family:'Courier New', Courier, monospace">Company name: Quickfix carpenter</h1>
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Company name: Quickfix </h1>
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Worker:  carpenter</h1>
     <div class="grid">
         <% carpenter.forEach(function(carp){ %>
             <div class="card">
@@ -9,10 +10,13 @@
                 <img src="/images/carpenters/<%= carp.image %>.jpeg" alt="<%= carp.name %>" class="carpenter-image">
                 </div>
                 <div class="card-content">
-                    <p>Person name: <%= carp.name %></p>
+                    <h2><b>Person name: <%= carp.name %></b></h2>
+                    <br>
                     <p>Place : <%=carp.place %></p>
                     <p>Experience :<%= carp.experience %></p>
                     <p>Phone No: <%= carp.phoneno %></p>
+                    <p>Ratings : <%= carp.ratings %></p>
+                    <p>Review : <%= carp.reviews %></p>
                 </div>
             </div>
         <% }) %>

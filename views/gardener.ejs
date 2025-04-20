@@ -1,17 +1,22 @@
 <%- include('partials/userheader') %>
 <body>
     <link rel="stylesheet" href="css/carpenter.css">
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Company name: Quickfix </h1>
+    <h1 style="color:black;font-family:'Courier New', Courier, monospace" class="card-header">Worker:  gardener</h1>
     <div class="grid">
         <% gardener.forEach(function(grdnr){ %>
             <div class="card">
-                <div class="intial"> <%= grdnr.name.charAt(0).toUpperCase() %> </div>
-                <div class="content">
-                    <p>Company name: Quickfix gardener</p>
-                    <p>Person name: <%= grdnr.name %></p>
-                    <p>Place : <%= grdnr.place %></p>
-                    <p>Experience :<%= grdnr.experience %></p>
-                    <p>Phone No: <%= grdnr.phoneno %></p>
-                </div>
+                <div class="card-image">
+                    <img src="/images/gardener/<%= grdnr.image %>.jpeg" alt="<%= grdnr.name %>" class="carpenter-image">
+                    </div>
+                    <div class="card-content">
+                        <p>Person name: <%= grdnr.name %></p>
+                        <p>Place : <%=grdnr.place %></p>
+                        <p>Experience :<%= grdnr.experience %></p>
+                        <p>Phone No: <%= grdnr.phoneno %></p>
+                        <p>Ratings : <%= grdnr.ratings %></p>
+                        <p>Review : <%= grdnr.reviews %></p>
+                    </div>
             </div>
         <% }) %>
     </div>
